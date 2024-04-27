@@ -5,11 +5,13 @@ const liste_mots = document.getElementById("mots")
 const liste_phrases = document.getElementById("phrases")
 const mot_utilisateur = document.querySelector(".validation input")
 const bouton_validation = document.querySelector(".validate")
-let score_change = document.getElementById("score")
+let score_change = document.querySelector(".score")
+let list_change = document.querySelector(".liste")
 
 let index_mots = 0
 let index_phrases = 0
 let score = 0
+
 
 
 liste_mots.addEventListener('click', ()=> {
@@ -42,6 +44,7 @@ bouton_validation.addEventListener('click', ()=>{
     if (mot_utilisateur.value === affichage_dynamique_liste.innerHTML){
         score++
         mot_utilisateur.value = " "
-        score_change.textContent = "Votre score : " + score + "/" + listes_mots.length
+        score_change.textContent = score 
+        list_change.textContent = listes_mots.length
     }
 })
