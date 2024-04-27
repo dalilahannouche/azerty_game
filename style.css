@@ -1,0 +1,75 @@
+h1, h3, p.introduction{
+   color:#9B0587; 
+}
+
+#choice p{
+    display: inline-block;
+}
+body, .social_media button, input{
+    background-color: #fff;
+}
+
+section{
+    background-color: #9B0587;
+    margin: auto;
+    padding: 15px;
+    width: 38em;
+    position: static;
+}
+
+body{
+    margin : auto;
+    text-align: center;
+    height: 100%;
+}
+
+p, #choice ul, #score{
+    color: #fff;
+}
+
+p span{
+  color: #9B0587;  
+  background-color: #fff;
+  width: 236px;
+  margin: auto;
+  display: block;
+  border-radius: 15px;
+  padding: 12px;
+}
+
+input[name="word_on"]{
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 7px;
+}
+
+footer{
+    bottom: 0;
+    background-color: #9B0587;
+    position: fixed;
+    width: 100%;
+}
+
+.social_media button{
+    margin : 15px;
+    color: #9B0587;
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 7px;
+    font-weight: bold;
+}
+
+#score{
+    margin-top: 30px;
+}
+
+.validate{
+    color: #9B0587;
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 7px;
+    font-weight: bold;
+}
