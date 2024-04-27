@@ -12,7 +12,7 @@ let index_mots = 0
 let index_phrases = 0
 let score = 0
 
-
+affichage_dynamique_liste.innerHTML = listes_mots[index_mots]
 
 liste_mots.addEventListener('click', ()=> {
     
