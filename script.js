@@ -18,7 +18,7 @@ liste_mots.addEventListener('click', ()=> {
         affichage_dynamique_liste.innerHTML = listes_mots[index_mots]
         index_mots++ 
     } else{
-        affichage_dynamique_liste.innerHTML = " "
+        affichage_dynamique_liste.innerHTML = "Le jeu est fini"
     }
     
     
@@ -31,7 +31,7 @@ liste_phrases.addEventListener('click', ()=> {
         affichage_dynamique_liste.innerHTML = listes_phrases[index_phrases]
         index_phrases++
     } else{
-        affichage_dynamique_liste.innerHTML = " "
+        affichage_dynamique_liste.innerHTML = "Le jeu est fini"
     }
     
     
