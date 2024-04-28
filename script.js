@@ -10,37 +10,33 @@ let list_change = document.querySelector(".liste")
 let index_list = 0
 let score = 0
 
-function listeChoix(listeToChoose, index_list){
-    listeToChoose.addEventListener('click', ()=>{
-        affichage_dynamique_liste.innerHTML = listeToChoose[index_list]
-        bouton_validation.addEventListener('click', ()=>{
-            if (mot_utilisateur.value === affichage_dynamique_liste.innerHTML){
-                score++
-                score_change.textContent = score 
-                list_change.textContent = listeToChoose.length
-                index_list++ 
-                if (index_list < listeToChoose.length) {
-                    affichage_dynamique_liste.innerHTML = listeToChoose[index_list];
-                } else {
-                    affichage_dynamique_liste.innerHTML = "Le jeu est fini";
-                    mot_utilisateur.disabled = true;
-                }
-                mot_utilisateur.value = ""
+
+function lancerJeu(){  
+    affichage_dynamique_liste.innerHTML = listes_mots[index_mots] 
+    console.log(affichage_dynamique_liste.innerHTML)
+
+    bouton_validation.addEventListener('click', ()=>{
+        if (mot_utilisateur.value === affichage_dynamique_liste.innerHTML){
+            score++
+            mot_utilisateur.value = " "
+            score_change.textContent = score 
+            list_change.textContent = listes_mots.length
+            index_mots++ 
+            affichage_dynamique_liste.innerHTML = listes_mots[index_mots] 
+
+            if(index_mot === listes_mots.length){
+                affichage_dynamique_liste.innerHTML = "Le jeu est fini"
             }
-    
-            else{
-                index_list++ 
-                if (index_list < listeToChoose.length) {
-                    affichage_dynamique_liste.innerHTML = listeToChoose[index_list];
-                } else {
-                    affichage_dynamique_liste.innerHTML = "Le jeu est fini";
-                    mot_utilisateur.disabled = true;
-                }
-                mot_utilisateur.value = "" 
-            }
-    
-        })  
-    })
+        }
+        else{
+            score = 0
+            list_change.textContent = listes_mots.length
+            index_mots++ 
+            affichage_dynamique_liste.innerHTML = listes_mots[index_mots]
+            mot_utilisateur.value = " " 
+        }
+    }) 
+      
 }
 
 
