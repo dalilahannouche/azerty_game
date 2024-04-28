@@ -25,10 +25,17 @@ function lancerJeu(){
             list_change.textContent = listes_mots.length
             index_mots++ 
             affichage_dynamique_liste.innerHTML = listes_mots[index_mots] 
+
+            if(index_mot === listes_mots.length){
+                affichage_dynamique_liste.innerHTML = "Le jeu est fini"
+            }
         }
         else{
-            affichage_dynamique_liste.innerHTML = "Le jeu est fini"
-           }
+            score = 0
+            list_change.textContent = listes_mots.length
+            index_mots++ 
+            affichage_dynamique_liste.innerHTML = listes_mots[index_mots] 
+        }
     }) 
       
 }
