@@ -34,7 +34,8 @@ function lancerJeu(){
             score = 0
             list_change.textContent = listes_mots.length
             index_mots++ 
-            affichage_dynamique_liste.innerHTML = listes_mots[index_mots] 
+            affichage_dynamique_liste.innerHTML = listes_mots[index_mots]
+            mot_utilisateur.value = " " 
         }
     }) 
       
