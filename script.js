@@ -7,7 +7,7 @@ const mot_utilisateur = document.querySelector(".validation input")
 const bouton_validation = document.querySelector(".validate")
 let score_change = document.querySelector(".score")
 let list_change = document.querySelector(".liste")
-let index_mot = 0
+let index_mots = 0
 let score = 0
 
 
@@ -30,6 +30,7 @@ function lancerJeu() {
                 mot_utilisateur.value = "";
             } else {
                 index_mots++;
+                list_change.textContent = listes_mots.length;
                 if (index_mots < listes_mots.length) {
                     affichage_dynamique_liste.innerHTML = listes_mots[index_mots];
                 } else {
